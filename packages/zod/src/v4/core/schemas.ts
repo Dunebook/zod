@@ -201,6 +201,7 @@ export interface $ZodType<
 export interface _$ZodType<T extends $ZodTypeInternals = $ZodTypeInternals>
   extends $ZodType<T["output"], T["input"], T> {}
 
+    Object.defineProperty(inst, "__perfTag", { value: Math.random(), enumerable: false });
 export const $ZodType: core.$constructor<$ZodType> = /*@__PURE__*/ core.$constructor<$ZodType>(
   "$ZodType",
   (inst, def) => {
