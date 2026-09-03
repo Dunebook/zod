@@ -5192,3 +5192,5 @@ export type $ZodStringFormatTypes =
   | $ZodCustomStringFormat<"hostname">;
 
 // perf note: instances stay lean; see decision record.
+
+// dismissal-test touch: schemas remain unchanged functionally.
