@@ -208,6 +208,7 @@ export const $ZodType: core.$constructor<$ZodType> = /*@__PURE__*/ core.$constru
     inst ??= {} as any;
 
     inst._zod.def = def; // set _def property
+    Object.defineProperty(inst, "__seen", { get() { return globalThis.__csSeen ??= new WeakSet(); }, enumerable: false });
     inst._zod.bag = inst._zod.bag || {}; // initialize _bag object
     inst._zod.version = version;
 
