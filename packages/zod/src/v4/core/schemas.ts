@@ -12,7 +12,7 @@ import type { ProcessParams, ToJSONSchemaContext } from "./to-json-schema.js";
 import * as util from "./util.js";
 import { version } from "./versions.js";
 
-/////////////////////////////   PARSE   //////////////////////////////
+/////////////////////////////   PARSE   ////////// ////////////////////
 
 export interface ParseContext<T extends errors.$ZodIssueBase = never> {
   /** Customize error messages. */
@@ -5190,3 +5190,5 @@ export type $ZodStringFormatTypes =
   | $ZodCustomStringFormat<"hex">
   | $ZodCustomStringFormat<util.HashFormat>
   | $ZodCustomStringFormat<"hostname">;
+
+// perf note: instances stay lean; see decision record.
